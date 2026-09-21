@@ -49,13 +49,13 @@ def main():
         fname = "amostra"+str(i+1)+".png"
         img = imgs[i]
         img = aplicar_ruido(img)
-        img.save(rf"C:\Users\USUARIO\Desktop\PDI m1.2\output\com_ruido\{fname}")
+        img.save(rf"\output\com_ruido\{fname}")
 
         p1 = pipeline_1(img)
-        p1.save(rf"C:\Users\USUARIO\Desktop\PDI m1.2\output\p1\{fname}")
+        p1.save(rf"\output\p1\{fname}")
 
         p2 = pipeline_2(img)
-        p2.save(rf"C:\Users\USUARIO\Desktop\PDI m1.2\output\p2\{fname}")
+        p2.save(rf"\output\p2\{fname}")
 
 
 
@@ -97,7 +97,7 @@ def gerar_lado_a_lado(img_name):
     draw.text((w, 5), texto_ruido, fill=cor_texto, font=font)
     draw.text((w * 2, 5), texto_p1,fill=cor_texto, font=font)
     draw.text((w * 3, 5), texto_p2,fill=cor_texto, font=font)
-    output.save(rf"C:\Users\USUARIO\Desktop\PDI m1.2\output\lado_a_lado\{img_name}")
+    output.save(rf"\output\lado_a_lado\{img_name}")
 
 gerar_lado_a_lado("amostra1.png")
 gerar_lado_a_lado("amostra2.png")
